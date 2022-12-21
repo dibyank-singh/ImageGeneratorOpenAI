@@ -1,19 +1,19 @@
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,  
 });
 const openai = new OpenAIApi(configuration);
 
 const ImageGeneratorAI= async(req, res)=>{
      const {prompt, size}=req.body;
-     console.log(prompt,size)
+     console.log(req.body)
      const imagesize= size === "small" ? '256x256' : size ==="medium"? 
       '512x512': '1024x1024';
     try{
         console.log("checkingggg")
         const response= await openai.createImage({
-            prompt:prompt,
+            prompt,
             n:1,
             size:imagesize
         })
