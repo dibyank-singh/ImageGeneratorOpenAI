@@ -1,17 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    
+.spinner{
+position: fixed;
+top: 25rem;
+left:40rem;
+bottom: 0;
+right: 0;
+height: 20px;
+width: 20px;
+/* margin: auto; */
+z-index: 999;
+overflow: show;
+display: none;
 }
-a, a:hover, a:focus, a:active {
+
+.show{
+    display: block;
+}
+
+
+a,
+a:hover,
+a:focus,
+a:active {
     text-decoration: none;
     color: inherit;
 }
-.main-header{
+
+.main-header {
     height: 12vh;
     padding: 20px;
     display: flex;
@@ -20,15 +40,16 @@ a, a:hover, a:focus, a:active {
     background-color: black;
     color: #ffffff;
 }
-.left-header{
+
+.left-header {
     display: flex;
     gap: 15px;
     text-decoration: none;
     color: #ffffff;
 }
 
-.container{
-    height: 40vh;
+.container {
+    height: 44vh;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -36,20 +57,34 @@ a, a:hover, a:focus, a:active {
     flex-direction: column;
     background-color: rgb(238, 236, 233);
 }
-.form-data{
+
+.form-data {
     /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.output-section{
-    height: 48vh;
+
+.output-section {
+    position: relative;
+    height: 44vh;
     /* background-color: lightgray; */
-    border: 0.5px solid rebeccapurple;
+    /* border: 0.5px solid rebeccapurple; */
 }
 
-.btn{
+.output-image {
+    overflow: hidden;
+    padding: 50px;
+    
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+.btn {
     margin-top: 12px;
     padding: 4px 13px;
     background-color: black;
